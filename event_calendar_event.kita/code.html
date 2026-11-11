@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>EVENT.KITA - Student Event Management</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-fixed-dim":"#cabeff","on-primary-fixed-variant":"#4d17c5","secondary-fixed":"#dce1ff","surface-dim":"#dcd6f8","error":"#ba1a1a","on-secondary-fixed":"#00164e","primary-fixed":"#e7deff","on-tertiary-fixed":"#1c0062","surface-container-high":"#ebe5ff","on-secondary-fixed-variant":"#003baf","on-tertiary":"#ffffff","on-surface-variant":"#494455","outline-variant":"#cac3d7","on-secondary-container":"#fffbff","surface-container-low":"#f6f1ff","outline":"#7a7486","surface-tint":"#663cdd","on-primary-container":"#ede4ff","on-surface":"#1b1831","inverse-surface":"#302d47","primary-fixed-dim":"#ccbdff","on-secondary":"#ffffff","on-tertiary-container":"#ece5ff","inverse-on-surface":"#f3eeff","tertiary":"#523bb1","inverse-primary":"#ccbdff","on-primary-fixed":"#1f005f","secondary":"#2552ca","surface-container":"#f0ebff","on-error-container":"#93000a","surface-container-lowest":"#ffffff","tertiary-container":"#6b55cb","on-error":"#ffffff","tertiary-fixed":"#e6deff","error-container":"#ffdad6","surface-variant":"#e5deff","surface":"#fcf8ff","surface-container-highest":"#e5deff","on-primary":"#ffffff","background":"#fcf8ff","primary":"#5728cf","on-background":"#1b1831","secondary-container":"#446ce4","on-tertiary-fixed-variant":"#482fa7","secondary-fixed-dim":"#b6c4ff","surface-bright":"#fcf8ff","primary-container":"#7048e8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-md":"1rem","space-xs":"0.25rem","margin":"2rem","margin-mobile":"1rem","space-xl":"2.5rem"},"fontFamily":{"body-lg":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"label-md":["Inter"],"title-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Inter"],"label-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-lg-mobile":["34px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"800"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[1240px] mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="EVENT.KITA Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOdaOTvzeeNrg3iZMYrmJ8qJwstiJcKXo3zWJHNEbRYS3ycKrLKQYT08lbK6UJE3skk2xlfqFUiNWgQ9TotXssxsD7-SXJA2aIGiuYrqkYHf3IPV0I7_GCwuN96q5M9-svpm1heSr9ShfO25IlKo1c_FJ0rTon2IHjmzpQpaTDsDf1DuEDWRf-p83xslVOA7GYicNR6U7GapQZQFTujbQzFKX8mu3Y6BcQuMnzlXWj"/><span class="font-title-md text-title-md font-bold tracking-tight text-on-surface group-hover:text-primary transition-colors">EVENT<span class="text-primary-container">.KITA</span></span></a><nav class="hidden lg:flex items-center gap-space-xs p-1" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg"><a class="px-space-md py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="explore-events" href="#">Explore Events</a><a aria-current="page" class="px-space-md py-2 transition-colors bg-surface-container-high text-primary font-bold rounded-lg" data-path="event-calendar" href="#">Calendar</a><a class="px-space-md py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="documentation-hub" href="#">Documentation</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center relative"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-56 xl:w-72 h-10 pl-9 pr-space-md bg-surface-container-lowest rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container/20 shadow-[0_1px_4px_-1px_rgba(112,72,232,0.06)]" placeholder="Cari event kampus, seminar..." type="text"/></div><a class="hidden md:inline-flex items-center justify-center h-10 px-space-md bg-surface-container text-primary font-label-lg text-label-lg rounded-full hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="explore-events" href="#">Jelajahi Event</a><div class="flex items-center gap-space-sm pl-space-xs"><a class="hidden sm:inline-flex items-center justify-center h-10 px-space-md text-on-surface-variant font-label-lg text-label-lg hover:text-on-surface transition-colors" data-path="login" href="#">Masuk</a><a class="inline-flex items-center justify-center h-10 px-space-md bg-primary-container text-on-primary font-label-lg text-label-lg rounded-full hover:bg-primary transition-all shadow-[0_2px_8px_-2px_rgba(112,72,232,0.3)]" data-path="register" href="#">Daftar</a><a class="inline-flex items-center rounded-full p-0.5 hover:ring-2 hover:ring-primary-container/30 transition-all" data-path="user-profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy_WI22FToMHiGHeKH2CjkKoEr_cqQbyXfOzPg8iWM04ft0PLFIflgX0CN9dVkL8Cf2NdsxiQU1m-m-PtbKTKapIPXB9AzfIoAos4p9p9QnJcF0P9IiliaSLxCoeJ-3AH0gmleFuVnu1bBe-TyBrsfAnjzaSvk10tCKQk9DYaotCSviMuXB8aVyqNLseNENVjIXyFY9vMW0tO14A8gvH1_rZD6EiqKvXNIAcbbf6cr"/></a></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-64px)]"><div class="flex flex-col w-full">
+<!-- Interactive Ambient Glow Background (Contained) -->
+<div class="relative w-full max-w-[1240px] mx-auto px-gutter py-space-md sm:py-space-lg">
+<div class="absolute -top-12 left-1/4 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 right-10 w-80 h-80 bg-secondary-fixed/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Top Headline & Action Ribbon -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm w-fit shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+          AGENDA AKTIF MAHASISWA 2025 / 2026
+        </div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+          Event Calendar
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Pantau jadwal seminar, workshop, dan kompetisi kampus tanpa ketinggalan tiket &amp; sertifikat ber-SKP.
+        </p>
+</div>
+<!-- Quick Sync Tools -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center bg-surface-container-lowest shadow-sm rounded-full p-1 border border-outline-variant/30">
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md bg-primary-container text-on-primary shadow-sm transition-all" id="viewMonthBtn">Bulan</button>
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="viewWeekBtn">Minggu</button>
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="viewListBtn">Agenda</button>
+</div>
+<button class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md shadow-sm transition-all" id="exportCalBtn">
+<span class="material-symbols-outlined text-[18px] text-primary">event_available</span>
+<span>Sinkronkan Kalender</span>
+</button>
+</div>
+</div>
+<!-- Filter Pills Row -->
+<div class="flex items-center gap-2 overflow-x-auto pb-3 pt-1 scrollbar-none">
+<button class="filter-pill active-pill whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm transition-all shadow-sm bg-primary-container text-on-primary">
+        Semua Kategori (28)
+      </button>
+<button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#7048E8]"></span>
+        Seminar &amp; Talkshow
+      </button>
+<button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#2552CA]"></span>
+        Workshop &amp; Bootcamp
+      </button>
+<button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#00875A]"></span>
+        Webinar Online
+      </button>
+<button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#E28300]"></span>
+        Kompetisi &amp; Hackathon
+      </button>
+<button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#D83B81]"></span>
+        Seni &amp; Festival
+      </button>
+</div>
+<!-- Main 2-Column Grid (Calendar 70% vs Selected Date Panel 30%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mt-space-md items-start">
+<!-- LEFT COLUMN: Main Interactive Calendar (approx 70% / 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Calendar Card Container -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md sm:p-space-lg shadow-md border border-outline-variant/20">
+<!-- Month Control Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-md mb-2 border-b border-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface" id="currentMonthYear">
+                  Oktober 2025
+                </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Semester Ganjil 2025/2026</p>
+</div>
+</div>
+<!-- Previous, Next, Today Buttons -->
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" id="todayBtn">
+                Hari Ini
+              </button>
+<div class="flex items-center bg-surface-container rounded-lg p-0.5">
+<button aria-label="Bulan Sebelumnya" class="w-8 h-8 rounded-md flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" id="prevMonthBtn">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button aria-label="Bulan Selanjutnya" class="w-8 h-8 rounded-md flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" id="nextMonthBtn">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Calendar Days of Week Header -->
+<div class="grid grid-cols-7 text-center font-label-md text-label-md text-on-surface-variant py-2">
+<span class="py-1">Sen</span>
+<span class="py-1">Sel</span>
+<span class="py-1">Rab</span>
+<span class="py-1 font-semibold text-primary">Kam</span>
+<span class="py-1">Jum</span>
+<span class="py-1 text-secondary">Sab</span>
+<span class="py-1 text-error">Min</span>
+</div>
+<!-- Calendar 7-Column Days Grid -->
+<div class="grid grid-cols-7 gap-1.5 sm:gap-2 pt-2" id="calendarMatrix">
+<!-- Week 1: Trailing prev month -->
+<div class="min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container-lowest/60 text-outline opacity-40 select-none flex flex-col justify-between">
+<span class="font-label-md text-label-md">29</span>
+</div>
+<div class="min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container-lowest/60 text-outline opacity-40 select-none flex flex-col justify-between">
+<span class="font-label-md text-label-md">30</span>
+</div>
+<!-- Oct 1 -->
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-01" data-events="1" data-label="Rabu, 1 Oktober 2025">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">1</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-medium bg-secondary-fixed text-on-secondary-fixed truncate">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2552CA]"></span>
+                  Git Workshop
+                </span>
+</div>
+</div>
+<!-- Oct 2 -->
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-02" data-events="0" data-label="Kamis, 2 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">2</span>
+<div></div>
+</div>
+<!-- Oct 3 -->
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-03" data-events="1" data-label="Jumat, 3 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">3</span>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-[#7048E8]"></span>
+</div>
+</div>
+<!-- Oct 4 -->
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-04" data-events="2" data-label="Sabtu, 4 Oktober 2025">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">4</span>
+<span class="text-[10px] font-semibold text-primary bg-primary-fixed px-1 rounded">2</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-tertiary-fixed text-on-tertiary-fixed truncate">AI Summit 2025</span>
+</div>
+</div>
+<!-- Oct 5 -->
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-05" data-events="0" data-label="Minggu, 5 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-error/80">5</span>
+<div></div>
+</div>
+<!-- Week 2 -->
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-06" data-events="0" data-label="Senin, 6 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">6</span>
+<div></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-07" data-events="1" data-label="Selasa, 7 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">7</span>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-[#E28300]" title="Hackathon Phase 1"></span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-08" data-events="0" data-label="Rabu, 8 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">8</span>
+<div></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-09" data-events="2" data-label="Kamis, 9 Oktober 2025">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">9</span>
+<span class="text-[10px] font-semibold text-primary bg-primary-fixed px-1 rounded">2</span>
+</div>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-[#7048E8]"></span>
+<span class="w-2 h-2 rounded-full bg-[#00875A]"></span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-10" data-events="1" data-label="Jumat, 10 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">10</span>
+<div class="flex flex-col gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary-fixed text-on-secondary-fixed truncate">Webinar Karier</span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-11" data-events="1" data-label="Sabtu, 11 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">11</span>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-[#2552CA]"></span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-12" data-events="0" data-label="Minggu, 12 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-error/80">12</span>
+<div></div>
+</div>
+<!-- Week 3 -->
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-13" data-events="1" data-label="Senin, 13 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">13</span>
+<div class="flex gap-1"><span class="w-2 h-2 rounded-full bg-[#7048E8]"></span></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-14" data-events="0" data-label="Selasa, 14 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">14</span>
+<div></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-15" data-events="2" data-label="Rabu, 15 Oktober 2025">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">15</span>
+<span class="text-[10px] font-semibold text-primary bg-primary-fixed px-1 rounded">2</span>
+</div>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-[#E28300]"></span>
+<span class="w-2 h-2 rounded-full bg-[#2552CA]"></span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-16" data-events="1" data-label="Kamis, 16 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">16</span>
+<div class="flex flex-col gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-primary-fixed text-on-primary-fixed truncate">Tech Talk BEM</span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-17" data-events="0" data-label="Jumat, 17 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">17</span>
+<div></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-18" data-events="3" data-label="Sabtu, 18 Oktober 2025">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">18</span>
+<span class="text-[10px] font-semibold text-primary bg-primary-fixed px-1 rounded">3</span>
+</div>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-[#7048E8]"></span>
+<span class="w-2 h-2 rounded-full bg-[#2552CA]"></span>
+<span class="w-2 h-2 rounded-full bg-[#D83B81]"></span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-19" data-events="0" data-label="Minggu, 19 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-error/80">19</span>
+<div></div>
+</div>
+<!-- Week 4: includes Selected Day (23 Oct) -->
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-20" data-events="1" data-label="Senin, 20 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">20</span>
+<div class="flex gap-1"><span class="w-2 h-2 rounded-full bg-[#00875A]"></span></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-21" data-events="0" data-label="Selasa, 21 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">21</span>
+<div></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-22" data-events="1" data-label="Rabu, 22 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">22</span>
+<div class="flex gap-1"><span class="w-2 h-2 rounded-full bg-[#2552CA]"></span></div>
+</div>
+<!-- HIGHLIGHTED ACTIVE DAY: 23 Oktober 2025 -->
+<div class="calendar-cell active-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-[#F1EDFF] shadow-sm cursor-pointer transition-all flex flex-col justify-between relative ring-2 ring-primary ring-offset-2 ring-offset-surface-container-lowest" data-date="2025-10-23" data-events="3" data-label="Kamis, 23 Oktober 2025" id="activeDateCell">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center font-bold">23</span>
+<span class="text-[10px] font-bold text-primary bg-primary-fixed px-1.5 py-0.5 rounded-full">3 Event</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-medium bg-primary-container text-on-primary truncate">National AI Expo</span>
+<div class="flex gap-1 items-center">
+<span class="w-2 h-2 rounded-full bg-[#7048E8]"></span>
+<span class="w-2 h-2 rounded-full bg-[#2552CA]"></span>
+<span class="w-2 h-2 rounded-full bg-[#E28300]"></span>
+</div>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-24" data-events="1" data-label="Jumat, 24 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">24</span>
+<div class="flex gap-1"><span class="w-2 h-2 rounded-full bg-[#7048E8]"></span></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-25" data-events="2" data-label="Sabtu, 25 Oktober 2025">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">25</span>
+<span class="text-[10px] font-semibold text-primary bg-primary-fixed px-1 rounded">2</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-tertiary-fixed text-on-tertiary-fixed truncate">Festival Budaya</span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-26" data-events="0" data-label="Minggu, 26 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-error/80">26</span>
+<div></div>
+</div>
+<!-- Week 5 -->
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-27" data-events="1" data-label="Senin, 27 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">27</span>
+<div class="flex gap-1"><span class="w-2 h-2 rounded-full bg-[#2552CA]"></span></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-28" data-events="1" data-label="Selasa, 28 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">28</span>
+<div class="flex flex-col gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-error-container text-on-error-container truncate font-medium">Sumpah Pemuda</span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-29" data-events="0" data-label="Rabu, 29 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">29</span>
+<div></div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-30" data-events="2" data-label="Kamis, 30 Oktober 2025">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">30</span>
+<span class="text-[10px] font-semibold text-primary bg-primary-fixed px-1 rounded">2</span>
+</div>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-[#7048E8]"></span>
+<span class="w-2 h-2 rounded-full bg-[#00875A]"></span>
+</div>
+</div>
+<div class="calendar-cell min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container/30 hover:bg-surface-container-high/60 cursor-pointer transition-all flex flex-col justify-between group" data-date="2025-10-31" data-events="1" data-label="Jumat, 31 Oktober 2025">
+<span class="font-label-md text-label-md font-medium text-on-surface group-hover:text-primary">31</span>
+<div class="flex gap-1"><span class="w-2 h-2 rounded-full bg-[#E28300]"></span></div>
+</div>
+<!-- Next month trailing -->
+<div class="min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container-lowest/60 text-outline opacity-40 select-none flex flex-col justify-between">
+<span class="font-label-md text-label-md">1</span>
+</div>
+<div class="min-h-[82px] sm:min-h-[96px] p-2 rounded-xl bg-surface-container-lowest/60 text-outline opacity-40 select-none flex flex-col justify-between">
+<span class="font-label-md text-label-md">2</span>
+</div>
+</div>
+<!-- Color Legend & Quick Note Footer -->
+<div class="mt-space-md pt-space-md border-t border-surface-container flex flex-wrap items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#7048E8]"></span>Seminar</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#2552CA]"></span>Workshop</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#00875A]"></span>Webinar</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#E28300]"></span>Lomba/Kompetisi</span>
+</div>
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">touch_app</span> Klik tanggal untuk memfilter
+            </span>
+</div>
+</div>
+<!-- Campus Month Metrics Mini Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center gap-space-sm border border-outline-variant/20">
+<div class="w-12 h-12 rounded-xl bg-[#F1EDFF] text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">18 Event</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Terverifikasi SKP Kampus</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center gap-space-sm border border-outline-variant/20">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">redeem</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">12 Gratis</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Termasuk E-Sertifikat</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center gap-space-sm border border-outline-variant/20">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">Rp 45 Juta</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Total Prize Pool Lomba</p>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Selected Date Panel & Upcoming Highlights (approx 30% / 4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Active Day Summary Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-md border border-outline-variant/20">
+<!-- Selected Day Header -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-primary-container text-on-primary font-bold flex flex-col items-center justify-center leading-none">
+<span class="text-xs uppercase font-medium">OKT</span>
+<span class="text-lg">23</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface" id="panelDateTitle">
+                  Kamis, 23 Oktober 2025
+                </h3>
+<span class="font-label-sm text-label-sm text-primary font-semibold" id="panelEventCount">
+                  3 Agenda Terjadwal
+                </span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">tune</span>
+</div>
+<!-- Schedule List for Selected Date -->
+<div class="flex flex-col gap-space-md pt-space-md">
+<!-- Event Card 1 -->
+<div class="group relative rounded-xl p-3 bg-surface-container-low hover:bg-surface-container transition-all shadow-sm">
+<div class="flex gap-space-sm">
+<img class="w-16 h-20 rounded-lg object-cover shrink-0 shadow-sm" data-alt="National Artificial Intelligence poster with modern purple neon geometric tech graphics and student speaker headshot illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOEMKLs6RFNghMG1LZ8dHxnvs_NzuztLsPYlZ7uEFiOHntZxtXis1l8wy3-n-7ZTvQ8M40mOGwgJ5Qqa5GUW8cAqkvSPGIrhRzI_WyfuRwMm5F4cC1uwSgQYWjhOSJb_aAl0sKR7y5HU4gagGUH5l8BJM44x10Mssa16W4Y62DMG6qiuXYkGDJaZ2WIlHtHB6e7BPdUgqqUeFDlxztqNCupsG3Z0WYeG7Xjgwc2VeJ"/>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] bg-primary text-on-primary font-semibold">
+                        Seminar AI
+                      </span>
+<span class="font-label-sm text-[11px] text-secondary font-bold">Gratis</span>
+</div>
+<h4 class="font-title-md text-[14px] font-bold text-on-surface truncate group-hover:text-primary transition-colors mt-1">
+                      National AI &amp; Data Summit 2025
+                    </h4>
+</div>
+<div class="flex flex-col gap-0.5 text-on-surface-variant font-body-sm text-[12px]">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+<span>09:00 - 12:30 WIB</span>
+</div>
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[14px] text-outline">location_on</span>
+<span class="truncate">Auditorium Kampus Utama (Lt. 4)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span> Sisa 18 Kursi
+                </span>
+<a class="inline-flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md font-bold transition-colors" data-path="event-details" href="#">
+                  Detail <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group relative rounded-xl p-3 bg-surface-container-low hover:bg-surface-container transition-all shadow-sm">
+<div class="flex gap-space-sm">
+<img class="w-16 h-20 rounded-lg object-cover shrink-0 shadow-sm" data-alt="UI UX design wireframe sketching and design sprint workshop poster with sleek blue layout and vibrant mockup templates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb2SnouMJmG2CSiUTosFE7KgV3Xzu81KcD3ebTTWRhMVhBjqo8gxzHjkvzcMhGevrgMAOwnfUZCo3iIU81E1ShS4sNSq_0TsKRMH9IY1tcvvCLVJxdcHIc1mu34TZywUqB5xbCvXheH1XPoAjqdwfBNfdzvvtnvMHe9ij9Ixz8MwuSgkN548g8FJ7DUDSx90g5ueRPK556Fzf7eBKcqN2kRxskJKcTDIhAQaIZ1nj4"/>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] bg-secondary text-on-secondary font-semibold">
+                        Hands-on Workshop
+                      </span>
+<span class="font-label-sm text-[11px] text-on-surface font-bold">Rp 35.000</span>
+</div>
+<h4 class="font-title-md text-[14px] font-bold text-on-surface truncate group-hover:text-primary transition-colors mt-1">
+                      UI/UX Design Sprint with Figma
+                    </h4>
+</div>
+<div class="flex flex-col gap-0.5 text-on-surface-variant font-body-sm text-[12px]">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+<span>13:30 - 16:30 WIB</span>
+</div>
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[14px] text-outline">laptop_mac</span>
+<span>Lab Komputer 3 &amp; Live Zoom</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Kuota Menipis (5 tersisa)
+                </span>
+<a class="inline-flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md font-bold transition-colors" data-path="event-details" href="#">
+                  Detail <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="group relative rounded-xl p-3 bg-surface-container-low hover:bg-surface-container transition-all shadow-sm">
+<div class="flex gap-space-sm">
+<img class="w-16 h-20 rounded-lg object-cover shrink-0 shadow-sm" data-alt="Student hackathon innovation pitch competition poster with orange gold ambient glow and laptop trophy symbols" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-6nWiWped66DE6w0OJPUiKuecJZTwngmQHAdzunOnoNeq0oZCZgjh0L67PmyMYfvEC709hSHg_oqGjY5Gl-n8Dpms3e_6eeJhX3Fdl4fCmSj0V-hYv_716Eydv1CtG20Sdoc95yzCF-jzrVNt5e-pBh3zhMZcFPbLskS4GhDaLV-vwFyFH8Sb00cZUlouXxItXGekoIyzIR9ylnzP7ijVQeSclM-2tvRLadmZ3OYH"/>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] bg-[#E28300] text-on-primary font-semibold">
+                        Lomba Pitching
+                      </span>
+<span class="font-label-sm text-[11px] text-secondary font-bold">Gratis</span>
+</div>
+<h4 class="font-title-md text-[14px] font-bold text-on-surface truncate group-hover:text-primary transition-colors mt-1">
+                      Campus Tech Venture Pitch Night
+                    </h4>
+</div>
+<div class="flex flex-col gap-0.5 text-on-surface-variant font-body-sm text-[12px]">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+<span>19:00 - 21:00 WIB</span>
+</div>
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[14px] text-outline">podcasts</span>
+<span>Streaming YouTube BEM Pusat</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span> Terbuka Umum
+                </span>
+<a class="inline-flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md font-bold transition-colors" data-path="event-details" href="#">
+                  Detail <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom Direct CTA -->
+<div class="mt-space-md pt-space-xs">
+<button class="w-full py-2.5 px-4 rounded-xl bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+              Ingatkan Semua Event Hari Ini
+            </button>
+</div>
+</div>
+<!-- Upcoming Week Highlights & Sync Widget -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-md border border-outline-variant/20 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Upcoming Minggu Ini</h3>
+</div>
+<a class="text-primary font-label-sm text-label-sm font-semibold hover:underline" data-path="explore-events" href="#">Lihat Semua</a>
+</div>
+<!-- Mini upcoming items -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container/40 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant w-9 text-center bg-surface-container-highest py-1 rounded">25 OKT</span>
+<div>
+<p class="font-title-md text-[13px] font-bold text-on-surface leading-tight">Malam Puncak Festival Budaya</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Lapangan Rektorat • 19:00 WIB</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Konser</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container/40 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant w-9 text-center bg-surface-container-highest py-1 rounded">28 OKT</span>
+<div>
+<p class="font-title-md text-[13px] font-bold text-on-surface leading-tight">Orasi Pemuda &amp; Debat Terbuka</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Aula Student Center • 10:00 WIB</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] bg-error-container text-on-error-container font-semibold">Akademik</span>
+</div>
+</div>
+<!-- Calendar Feed Integration box -->
+<div class="mt-space-xs p-3 rounded-xl bg-[#F1EDFF] border border-primary/20 flex flex-col gap-2">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">sync_alt</span>
+<div>
+<p class="font-label-md text-label-md font-bold text-primary">Sinkronisasi Otomatis</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Tambahkan feed `.ics` kalender kampus langsung ke smartphone kamu.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<button class="py-1.5 px-2 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary font-label-sm text-[11px] font-semibold shadow-sm transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_add_on</span> Google Cal
+              </button>
+<button class="py-1.5 px-2 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary font-label-sm text-[11px] font-semibold shadow-sm transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">file_download</span> Apple iCal
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Organizer Banner Callout (Bespoke Bottom Strip) -->
+<div class="mt-space-xl p-space-md sm:p-space-lg rounded-2xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md border border-outline-variant/30">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[32px]">campaign</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Punya Agenda Kegiatan BEM atau UKM?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Daftarkan event kampusmu di EVENT.KITA untuk menjangkau ribuan mahasiswa secara instan.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-6 py-3 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg font-bold shadow-md transition-all" data-path="dashboard-overview" href="#">
+          Publikasikan Event Gratis
+        </a>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Script for Calendar Date Selection and Filtering -->
+<script>
+    (function initCalendarLogic() {
+      const cells = document.querySelectorAll('.calendar-cell');
+      const panelTitle = document.getElementById('panelDateTitle');
+      const panelCount = document.getElementById('panelEventCount');
+      const prevBtn = document.getElementById('prevMonthBtn');
+      const nextBtn = document.getElementById('nextMonthBtn');
+      const todayBtn = document.getElementById('todayBtn');
+      const monthYearDisplay = document.getElementById('currentMonthYear');
+      const filterPills = document.querySelectorAll('.filter-pill');
+
+      // Date Selection handler
+      cells.forEach(cell => {
+        cell.addEventListener('click', function() {
+          cells.forEach(c => {
+            c.classList.remove('ring-2', 'ring-primary', 'ring-offset-2', 'ring-offset-surface-container-lowest', 'bg-[#F1EDFF]');
+          });
+
+          this.classList.add('ring-2', 'ring-primary', 'ring-offset-2', 'ring-offset-surface-container-lowest', 'bg-[#F1EDFF]');
+          
+          const label = this.getAttribute('data-label') || 'Tanggal Terpilih';
+          const count = this.getAttribute('data-events') || '0';
+
+          if (panelTitle) panelTitle.textContent = label;
+          if (panelCount) {
+            panelCount.textContent = count === '0' 
+              ? 'Belum ada agenda event' 
+              : count + ' Agenda Terjadwal';
+          }
+        });
+      });
+
+      // Filter Pill activation
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', function() {
+          filterPills.forEach(p => {
+            p.classList.remove('bg-primary-container', 'text-on-primary');
+            p.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+          });
+          this.classList.add('bg-primary-container', 'text-on-primary');
+          this.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+      });
+
+      // Quick month navigation simulation
+      let currentMonthIndex = 9; // October (0-indexed: 9)
+      const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+      function updateMonthHeader() {
+        if (monthYearDisplay) {
+          monthYearDisplay.textContent = months[currentMonthIndex] + ' 2025';
+        }
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          currentMonthIndex = (currentMonthIndex === 0) ? 11 : currentMonthIndex - 1;
+          updateMonthHeader();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          currentMonthIndex = (currentMonthIndex === 11) ? 0 : currentMonthIndex + 1;
+          updateMonthHeader();
+        });
+      }
+
+      if (todayBtn) {
+        todayBtn.addEventListener('click', () => {
+          currentMonthIndex = 9; // back to October
+          updateMonthHeader();
+          const oct23 = document.querySelector('[data-date="2025-10-23"]');
+          if (oct23) oct23.click();
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-xl"><div class="max-w-[1240px] mx-auto px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-lg"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="EVENT.KITA Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOdaOTvzeeNrg3iZMYrmJ8qJwstiJcKXo3zWJHNEbRYS3ycKrLKQYT08lbK6UJE3skk2xlfqFUiNWgQ9TotXssxsD7-SXJA2aIGiuYrqkYHf3IPV0I7_GCwuN96q5M9-svpm1heSr9ShfO25IlKo1c_FJ0rTon2IHjmzpQpaTDsDf1DuEDWRf-p83xslVOA7GYicNR6U7GapQZQFTujbQzFKX8mu3Y6BcQuMnzlXWj"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">EVENT<span class="text-primary-container">.KITA</span></span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Discover. Join. Experience. Platform manajemen event dan ekosistem kegiatan mahasiswa nomor 1 untuk kampus di seluruh Indonesia.</p><div class="flex items-center gap-space-sm pt-space-xs"><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">chat_bubble</span></a><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">alternate_email</span></a><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">podcasts</span></a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-on-surface uppercase tracking-wider">Navigasi</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Beranda</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="explore-events" href="#">Jelajahi Event</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="event-calendar" href="#">Kalender Agenda</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="documentation-hub" href="#">Dokumentasi &amp; Galeri</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="dashboard-overview" href="#">Portal Organizer</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-on-surface uppercase tracking-wider">Kategori</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="explore-events" href="#">Seminar &amp; Workshop</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="explore-events" href="#">Lomba &amp; Hackathon</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="explore-events" href="#">Konser &amp; Seni Budaya</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="explore-events" href="#">Sosial &amp; Volunteer</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="explore-events" href="#">Job Fair &amp; Karier</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-on-surface uppercase tracking-wider">Dukungan</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="help-center" href="#">Pusat Bantuan</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Syarat &amp; Ketentuan</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Kebijakan Privasi</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="campus-partnership" href="#">Kemitraan BEM &amp; UKM</a></li><li class="p-0 m-0"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="support-contact" href="#">Hubungi Kami</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><p>© 2025 EVENT.KITA. Seluruh hak cipta dilindungi. Dikembangkan bersama kolaborasi komunitas kampus Indonesia.</p><div class="flex items-center gap-space-md"><span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-container"></span>Status Sistem: Normal</span><span class="text-outline">•</span><span>IDN / Bahasa Indonesia</span></div></div></div></footer></body></html>
